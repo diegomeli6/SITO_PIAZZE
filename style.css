@@ -1,0 +1,392 @@
+    @font-face {
+    font-family: 'Kanit Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kanit Regular'), url('fonts/Kanit-Regular.woff') format('woff');
+    }
+    
+    @font-face {
+    font-family: 'Kanit ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kanit ExtraLight'), url('fonts/Kanit-ExtraLight.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Kanit Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kanit Light'), url('fonts/Kanit-Light.woff') format('woff');
+    }
+    
+    @font-face {
+    font-family: 'Kanit Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kanit Medium'), url('fonts/Kanit-Medium.woff') format('woff');
+    }
+    
+:root {
+  --bg_color: #FAFAFA;
+  --main_color: #1D1E2C;
+  --secondary_color: #E5B13A;
+}
+
+* {
+	box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	box-sizing: border-box; /* il comportamento di default è content-box, con border-box, larghezza e altezza includono anche il padding e i bordi, rendendo più intutivo il calcolo delle dimensioni */
+    background-color: var(--bg_color);
+}
+
+body {
+    margin: 0;
+    font-family: 'Kanit Medium' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenitore {
+	max-width: 1100px; /* o quello che volete */
+	margin: 0 auto; /* per centrare quel contenitore nella pagina */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main_color);
+}
+
+nav {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+    font-size: 1.2rem;
+    background-color: color-mix(in srgb, var(--secondary_color) 10%, transparent);
+}
+
+.nav_link ul {
+    display: flex;
+    gap: 64px;
+}
+
+.nav_link li:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    grid-area: 1 / 1;
+}
+
+header h1 {
+    grid-area: 1 / 1;
+    z-index: 2;
+    text-align: center;
+    color: var(--bg_color);
+    text-transform: uppercase;
+    font-size: 5vw;
+    line-height: 104%;
+    letter-spacing: 0%;
+    font-family: 'Kanit Regular' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 6px;
+}
+
+.info hr {
+    background-color: var(--secondary_color);
+    border: none;
+    height: 1px;
+}
+
+.info_dx {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    gap: 30px;
+    padding-right: 64px;
+}
+
+.info_dx img {
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+}
+
+.info_dx_txt {
+    width: 40%;
+}
+
+.info_sx {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 500px;
+    gap: 30px;
+    padding-left: 64px;
+}
+
+.info_sx img {
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+}
+
+.info_sx_txt {
+    text-align: right;
+    width: 40%;
+}
+
+.info_dx_txt h1, .info_sx_txt h1 {
+    font-family: 'Kanit Regular' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.2vw;
+    text-transform: uppercase;
+    color: var(--secondary_color);
+    letter-spacing: 0%;
+}
+
+.info_dx_txt p, .info_sx_txt p {
+    font-family: 'Kanit Light' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.15vw;
+    color: var(--main_color);
+    letter-spacing: 0%;
+}
+
+.piazze_importanti {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.piazze_importanti {
+    text-transform: uppercase;
+    color: var(--secondary_color);
+    font-family: 'Kanit Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.piazze {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    height: 273px;
+    width: 273px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+}
+
+.card::after {
+    content: '';
+    grid-area: 1 / 1;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in srgb, var(--main_color) 75%, transparent);
+    transition: transform 0.4s ease;
+}
+
+.card a {
+    position: absolute;
+    inset: 0;
+    text-decoration: none;
+    color: var(--bg_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-family: 'Kanit ExtraLight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: transform 0.4s ease;
+}
+
+.card a h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 104%;
+}
+
+.card a p {
+    font-size: 1.5rem;
+}
+
+
+.card img {
+    grid-area: 1 / 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    display: flex;
+    gap: 64px;
+}
+
+menu {
+    width: 35%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: 100vh;
+    background-color: color-mix(in srgb, var(--secondary_color) 10%, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 32px 0;
+    border: 1px solid var(--secondary_color);
+}
+
+menu h1 {
+    text-transform: uppercase;
+    color: var(--secondary_color);
+    font-family: 'Kanit Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+menu hr {
+    background-color: var(--secondary_color);
+    border: none;
+    height: 1px;
+    width: 350px;
+}
+
+menu a {
+    text-decoration: none;
+    color: var(--main_color);
+    font-size: 1.5rem;
+    font-family: 'Kanit Light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+menu a:hover {
+    text-decoration: underline;
+}
+
+menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista_piazze {
+    text-transform: uppercase;
+    color: var(--secondary_color);
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.lista_piazze hr {
+    background-color: var(--secondary_color);
+    border: none;
+    height: 1px;
+}
+
+.provincia {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cards {
+    display: flex;
+    gap: 12px;
+}
+
+footer {
+    background-color: color-mix(in srgb, var(--secondary_color) 10%, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--secondary_color);
+}
+
+footer a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main_color);
+}
+
+.footer_logo {
+    padding: 10px 0 0 0;
+    font-size: 1.5rem;
+    font-family: 'Kanit Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 256px;
+    padding: 10px 0;
+}
+
+.footer_link a:hover {
+    text-decoration: underline;
+}
+
+.footer_link_pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_link_piazze {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-family: 'Kanit ExtraLight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width:600px) /* o la misura che volete */  {
+    
+}
