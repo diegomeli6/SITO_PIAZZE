@@ -469,6 +469,147 @@ footer p {
 }
 
 @media (max-width:1300px) /* o la misura che volete */  {
+        nav {
+        font-size: 2.5vw;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_link {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .overlay a {
+        font-size: 4vw;
+    }
+
+    header {
+        grid-template-rows: 50vh;
+    }
+
+    header h1 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    header img {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .info {
+        gap: 24px;
+    }
+
+    .info_dx {
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .info_dx img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .info_dx_txt {
+        width: 100%;
+        padding: 30px 30px;
+    }
+
+    .info_sx {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .info_sx img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .info_sx_txt {
+        width: 100%;
+        text-align: left;
+        padding: 30px 30px;
+    }
+
+    .info_dx_txt h1, .info_sx_txt h1 {
+        font-size: 7vw;
+    }
+
+    .info_dx_txt p, .info_sx_txt p {
+        font-size: 2.5vw;
+    }
+
+    .piazze {
+        gap: 15px;
+    }
+
+    .piazze_importanti {
+        padding: 0 0 64px 0;
+    }
+
+    .piazze_importanti  h1{
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .card {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .card a h1 {
+        text-transform: uppercase;
+        font-size: 3.5vw;
+        text-align: center;
+        line-height: 104%;
+    }
+
+    .card a p {
+        font-size: 3vw;
+    }
+
+    .footer_logo {
+        font-size: 3.5vw;
+    }
+
+    .footer_link {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
+        font-size: 2.5vw;
+    }
+
+    footer p {
+        font-size: 1.8vw;
+    }
+
+    footer p:nth-child(1) {
+        font-size: 2.5vw;
+    }
+
+    .footer_link_piazze {
+        flex-direction: column;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 926px) {
 
     nav {
         font-size: 2.5vw;
