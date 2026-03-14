@@ -41,6 +41,7 @@
 html {
 	box-sizing: border-box; /* il comportamento di default è content-box, con border-box, larghezza e altezza includono anche il padding e i bordi, rendendo più intutivo il calcolo delle dimensioni */
     background-color: var(--bg_color);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -195,6 +196,7 @@ header::after {
     flex-direction: column;
     gap: 6px;
     padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .info hr {
@@ -219,6 +221,9 @@ header::after {
 
 .info_dx_txt {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .info_sx {
@@ -239,6 +244,9 @@ header::after {
 .info_sx_txt {
     text-align: right;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .info_dx_txt h1, .info_sx_txt h1 {
@@ -291,6 +299,7 @@ header::after {
     align-items: center;
     justify-content: center;
     transition: transform 0.4s ease;
+    overflow: hidden;
 }
 
 .card::after {
@@ -319,15 +328,14 @@ header::after {
 
 .card a h1 {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2vw;
     text-align: center;
     line-height: 104%;
 }
 
 .card a p {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
-
 
 .card img {
     grid-area: 1 / 1;
@@ -378,7 +386,7 @@ menu hr {
 menu a {
     text-decoration: none;
     color: var(--main_color);
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     font-family: 'Kanit Light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -437,7 +445,7 @@ footer a {
 
 .footer_logo {
     padding: 10px 0 0 0;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     font-family: 'Kanit Regular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -469,7 +477,7 @@ footer p {
 }
 
 @media (max-width:1300px) /* o la misura che volete */  {
-        nav {
+    nav {
         font-size: 2.5vw;
         flex-direction: row;
         justify-content: space-between;
@@ -489,7 +497,7 @@ footer p {
     }
 
     header {
-        grid-template-rows: 50vh;
+        grid-template-rows: 30vh;
     }
 
     header h1 {
@@ -515,7 +523,7 @@ footer p {
     }
 
     .info_dx img {
-        height: 50vh;
+        height: 30vh;
         width: 100%;
         object-fit: cover;
     }
@@ -534,7 +542,7 @@ footer p {
     }
 
     .info_sx img {
-        height: 50vh;
+        height: 30vh;
         width: 100%;
         object-fit: cover;
     }
@@ -566,16 +574,53 @@ footer p {
         text-align: center;
     }
 
+    .menu {
+    flex-direction: column;
+    }
+
+    menu {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 20px;
+        border: none;
+        border: 1px solid var(--secondary_color);
+    }
+
+    menu hr {
+        display: none;
+    }
+
+    menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    menu a {
+        font-size: 2.5vw;
+    }
+
+    .lista_piazze {
+        padding: 32px 32px;
+    }
+
+    .lista_card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .card {
         width: 30vw;
         height: 30vw;
     }
 
     .card a h1 {
-        text-transform: uppercase;
-        font-size: 3.5vw;
-        text-align: center;
-        line-height: 104%;
+        font-size: 4vw;
     }
 
     .card a p {
@@ -596,11 +641,7 @@ footer p {
     }
 
     footer p {
-        font-size: 1.8vw;
-    }
-
-    footer p:nth-child(1) {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
 
     .footer_link_piazze {
@@ -730,6 +771,10 @@ footer p {
         flex-direction: column;
         text-transform: uppercase;
     }
+
+    footer p {
+        font-size: 2.5vw;
+    }
 }
 
 @media (max-width:600px) /* o la misura che volete */  {
@@ -832,9 +877,36 @@ footer p {
         text-align: center;
     }
 
+    menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    menu a {
+        font-size: 4.5vw;
+    }
+
+    .lista_piazze {
+        padding: 32px 32px;
+    }
+
+    .lista_card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .card {
         width: 60vw;
         height: 60vw;
+    }
+
+    .card a h1 {
+        font-size: 7vw;
+    }
+
+    .card a p {
+        font-size: 5vw;
     }
 
     .footer_logo {
